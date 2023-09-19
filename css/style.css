@@ -102,6 +102,14 @@ a {
     width: 40px;
 }
 
+.like-button {
+    margin-right: 5px;
+}
+
+.click-button:hover {
+    color: var(--light);
+}
+
 .album {
     font-size: 13px;
     color: var(--light);
@@ -114,12 +122,14 @@ a {
     color: var(--grey);
 }
 
-
+.streaming-album-name:hover {
+    color: var(--light);
+    text-decoration: underline;
+}
 
 .col-timline {
     width: 50%;
 }
-
 
 .play-menu {
     display: flex;
@@ -131,7 +141,11 @@ a {
 
 .play-button {
     font-size: 30px;
-    margin: 10px;
+    margin: 5px;
+}
+
+.play-button:hover {
+    transform: scale(1.2);
 }
 
 .timeline {
@@ -148,6 +162,7 @@ a {
     height: 3px;
     background-color: var(--light-grey);
     border-radius: 3px;
+    position: relative;
 }
 
 .timeline-process {
@@ -155,13 +170,29 @@ a {
     height: 3px;
     background-color: var(--light);
     border-radius: 3px;
+    vertical-align: text-top;
+}
+
+.timeline-bar:hover .scroll-button {
+    opacity: 1;
+}
+
+.timeline-bar:hover .timeline-process {
+    background-color: greenyellow;
+}
+
+.scroll-button {
+   position: absolute;
+   top: -6px;
+   color: var(--light);
+   font-size: 12px;
+   opacity: 0;
 }
 
 .timeline-bar.volume-bar {
     width: 100px;
     margin: 0;
 }
-
 
 
 /* // Small devices (landscape phones, 552px and up) */
