@@ -43,7 +43,7 @@ a {
     padding: 20px;
 }
 
-.debug [class^="col"] {
+.debu [class^="col"] {
     border: 1px solid rgb(43, 0, 255);
     padding: 10px;
 }
@@ -84,13 +84,14 @@ a {
     height: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--light-black);
+    padding: 10px 6px 25px;
 }
 
 
 .streaming-album {
     display: flex;
-    flex-wrap: wrap;
     gap: 12px;
     color: var(--light-grey);
     align-items: center;
@@ -105,7 +106,7 @@ a {
     font-size: 13px;
     color: var(--light);
     font-weight: bold;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 .streaming-album-name {
@@ -113,9 +114,12 @@ a {
     color: var(--grey);
 }
 
+
+
 .col-timline {
     width: 50%;
 }
+
 
 .play-menu {
     display: flex;
@@ -135,17 +139,27 @@ a {
     color: var(--light);
     font-size: 10px;
     justify-content: center;
+    align-items: center;
 }
 
-.timeline-number::before {
-    content: '';
-    display: inline-block;
+.timeline-bar {
     margin: 0 15px;
-    text-align: center;
-    width: 420px;
+    width: 100%;
     height: 3px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 1px;
+    background-color: var(--light-grey);
+    border-radius: 3px;
+}
+
+.timeline-process {
+    width: 18%;
+    height: 3px;
+    background-color: var(--light);
+    border-radius: 3px;
+}
+
+.timeline-bar.volume-bar {
+    width: 100px;
+    margin: 0;
 }
 
 
@@ -153,26 +167,23 @@ a {
 /* // Small devices (landscape phones, 552px and up) */
 @media (min-width: 552px) {
     
-    .like-button {
-        display: flex;
-        flex-direction: column;
-        color: var(--light-grey);
-    }
+   
 
 }
 
 /* // Medium devices (tablets, 639px and up) */
 @media (min-width: 639px) {
 
+    .album {
+        margin-right: 40px;
+    }
+    
 }
 
 /* // Large devices (desktops, 878px and up) */
 @media (min-width: 878px) {
 
-    .like-button {
-        display: none;
-    }
-
+    
  }
 
 /* // X-Large devices (large desktops, 1200px and up)
