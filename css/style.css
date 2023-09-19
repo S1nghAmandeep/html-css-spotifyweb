@@ -10,12 +10,63 @@ html {
 
 /* debug */
 
-.debug .row {
-    border: 1px solid red;
-    padding: 10px;
-}
 
-.debug [class^="col"] {
-    border: 1px solid orange;
+.debug [class^="app"] {
+    border: 1px solid rgb(98, 255, 0);
     padding: 20px;
 }
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app_body {
+    flex-grow: 1;
+    display: flex;
+}
+
+.app_toolbar {
+    height: auto;
+}
+
+
+/* barra di ricerca */
+
+.nav-bar {
+    width: 230px;
+    border: 1px solid rgb(48, 48, 48);
+    flex-shrink: 0;
+
+}
+
+/* lista musica */
+
+.app_content {
+    flex-grow: 1;
+    border: 1px solid rgb(25, 23, 17);
+
+}
+
+
+/* // Small devices (landscape phones, 552px and up) */
+@media (min-width: 552px) {
+
+}
+
+/* // Medium devices (tablets, 639px and up) */
+@media (min-width: 639px) {
+
+}
+
+/* // Large devices (desktops, 878px and up) */
+@media (min-width: 878px) {
+
+ }
+
+/* // X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1440px) { ... } */
