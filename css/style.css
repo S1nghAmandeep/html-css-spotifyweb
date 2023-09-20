@@ -53,10 +53,10 @@ a {
     padding: 20px;
 } */
 
-/* .nav-bar [class^="card"] {
-    border: 1px solid rgb(43, 0, 255);
+main [class^="card"] {
+    border: 1px solid rgb(255, 4, 0);
     padding: 10px;
-} */
+}
 
 .app {
     height: 100vh;
@@ -126,11 +126,46 @@ a {
     mask-image: ;
 }
 
-/* inizio lista musica */
+/* inizio lista musica principale */
 
 .app_content {
     flex-grow: 1;
-    background-color: var(--dark-blue);
+    background-color: rgb(76, 97, 99);
+}
+
+.card-upgrade {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: sticky;
+    padding: 20px 5px 30px;
+}
+
+.upgrade-button {
+    line-height: 40px;
+    border: 1px solid var(--light);
+    padding: 0 30px;
+    border-radius: 50px;
+    color: var(--light);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card-type-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    text-transform: uppercase;
+    color: var(--light-grey);
+    font-weight: 700;
+}
+
+.underline-text {
+    height: 2px;
+    width: 34px;
+    margin-left: 34px;
+    background-color: var(--green);
 }
 
 /* inizio area toolbar */
