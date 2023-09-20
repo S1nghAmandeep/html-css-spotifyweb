@@ -35,6 +35,15 @@ a {
     --dark-blue: #141922;
 }
 
+/* utility classes */
+
+.disapear {
+    display: none;
+}
+
+.space-bottom {
+    margin-bottom: 15px;
+}
 
 /* debug */
 
@@ -71,47 +80,33 @@ a {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    background-color: var(--grey);
+    background-color: var(--black);
+    padding: 10px;
 }
 
-.search-list {
-    display: flex;
-    flex-direction: column;
-    color: var(--light);
-    gap: 10px;
+.image-logo-big {
+    display: none;
+}
+
+.image-logo-small {
+    margin-bottom: 20px;
 }
 
 .nav-bar-image {
-    width: 22px;
-    display: block;
+    filter: invert(0.3);
 }
 
-.nav-button {
-    display: flex;
-    font-size: 18px;
-    gap: 10px;
-    align-items: center;
+.text-search-list {
+    display: none;
 }
 
-/* playlist area */
-
-.playlist-button {
-    font-size: 32px;
+.card-playlist {
+    display: none;
 }
 
-.playlist-title {
-    color: var(--light);
-    text-transform: uppercase;
-    margin-bottom: 15px;
+.card-profile {
+    margin-top: auto;
 }
-
-.playlist-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    color: var(--light-grey);
-}
-
 /* lista musica */
 
 .app_content {
@@ -248,14 +243,85 @@ a {
         margin-right: 40px;
     }
 
-    .card-profile {
-        margin-top: auto;
-    }
-
     .nav-bar {
         width: 250px;
     }
+
+    .image-logo-big {
+        display: block;
+        width: 140px;
+        margin-bottom: 20px;
+    }
     
+    .image-logo-small {
+        display: none;
+    }
+
+    
+    .search-list {
+        display: flex;
+        flex-direction: column;
+        color: var(--light);
+        gap: 15px;
+    }
+    
+    .nav-bar-image {
+        width: 22px;
+        display: block;
+        filter: invert(0.3);
+    }
+    
+    .nav-button {
+        display: flex;
+        font-size: 20px;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .text-search-list {
+        display: inline;
+        font-size: 18px;
+        color: var(--light-grey);
+    }
+    
+    /* playlist area */
+    
+    .card-playlist {
+        display: block;
+        margin-top: 20px;
+    }
+    
+    .playlist-button {
+        font-size: 32px;
+    }
+    
+    .playlist-title {
+        color: var(--light);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    
+    .playlist-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: var(--light-grey);
+    }
+    
+    .divider {
+        display: block;
+        width: 100%;
+        background-color: var(--light-grey);
+        height: 2px;
+    }
+    
+    .space-bottom {
+        margin-bottom: 0;
+    }
+
+    .apear {
+        display: inline;
+    }
 
 }   
 
