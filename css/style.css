@@ -31,25 +31,27 @@ a {
     --black:#000000;
     --light-black:#282828;
     --light:#FFFFFF;
-
+    --green: #ADFF2F;
+    --dark-blue: #141922;
 }
 
 
 /* debug */
 
 
-.debug [class^="app"] {
+/* .debug [class^="app"] {
     border: 1px solid rgb(98, 255, 0);
     padding: 20px;
-}
+} */
 
-.debu [class^="col"] {
+/* .nav-bar [class^="card"] {
     border: 1px solid rgb(43, 0, 255);
     padding: 10px;
-}
+} */
 
 .app {
     height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -57,6 +59,7 @@ a {
 .app_body {
     flex-grow: 1;
     display: flex;
+    overflow: hidden;
 }
 
 
@@ -64,18 +67,56 @@ a {
 /* barra di ricerca */
 
 .nav-bar {
-    width: 230px;
-    border: 1px solid rgb(48, 48, 48);
+    width: 50px;
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
+    background-color: var(--grey);
+}
 
+.search-list {
+    display: flex;
+    flex-direction: column;
+    color: var(--light);
+    gap: 10px;
+}
+
+.nav-bar-image {
+    width: 22px;
+    display: block;
+}
+
+.nav-button {
+    display: flex;
+    font-size: 18px;
+    gap: 10px;
+    align-items: center;
+}
+
+/* playlist area */
+
+.playlist-button {
+    font-size: 32px;
+}
+
+.playlist-title {
+    color: var(--light);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.playlist-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--light-grey);
 }
 
 /* lista musica */
 
 .app_content {
     flex-grow: 1;
-    border: 1px solid rgb(25, 23, 17);
-
+    background-color: var(--dark-blue);
 }
 
 /* area toolbar */
@@ -83,6 +124,8 @@ a {
 .app_toolbar {
     height: auto;
     display: flex;
+    overflow: hidden;
+    flex-shrink: 0;
     justify-content: space-between;
     align-items: center;
     background-color: var(--light-black);
@@ -129,6 +172,7 @@ a {
 
 .col-timline {
     width: 50%;
+    margin: 0 15px;
 }
 
 .play-menu {
@@ -178,12 +222,12 @@ a {
 }
 
 .timeline-bar:hover .timeline-process {
-    background-color: greenyellow;
+    background-color: var(--green);
 }
 
 .scroll-button {
    position: absolute;
-   top: -6px;
+   top: -7px;
    color: var(--light);
    font-size: 12px;
    opacity: 0;
@@ -192,15 +236,28 @@ a {
 .timeline-bar.volume-bar {
     width: 100px;
     margin: 0;
+    flex-grow: 1;
 }
+
 
 
 /* // Small devices (landscape phones, 552px and up) */
 @media (min-width: 552px) {
     
-   
+    .album {
+        margin-right: 40px;
+    }
 
-}
+    .card-profile {
+        margin-top: auto;
+    }
+
+    .nav-bar {
+        width: 250px;
+    }
+    
+
+}   
 
 /* // Medium devices (tablets, 639px and up) */
 @media (min-width: 639px) {
@@ -208,6 +265,7 @@ a {
     .album {
         margin-right: 40px;
     }
+
     
 }
 
