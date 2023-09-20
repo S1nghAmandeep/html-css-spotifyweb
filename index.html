@@ -10,14 +10,77 @@
 </head>
 <body class="debg">
     <div class="app">
-        <main class="app_body">
-            <aside class="nav-bar"></aside>
-            <div class="app_content"></div>
-        </main>
+        <div class="app_body">
+            <header class="nav-bar">
+                <div class="card-nav-logo">
+                    <img src="./img/logo.svg" alt="">
+                </div>
+                <div class="card-search-list">
+                    <ul class="search-list">
+                        <li>
+                            <div class="nav-button">
+                                <figure class="nav-bar-image"><img src="./img/home.svg" alt=""></figure>
+                                <span>Home</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-button">
+                                <figure class="nav-bar-image"><img src="./img/search.svg" alt=""></figure>
+                                <span>Cerca</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav-button">
+                                <figure class="nav-bar-image"><img src="./img/libreria.svg" alt=""></figure>
+                                <span>La tua libreria</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-playlist">
+                    <div>
+                        <h4 class="playlist-title">Playlist</h4>
+                        <ul class="playlist-menu">
+                            <div class="nav-button ">
+                                <i class="fa-sharp fa-solid fa-square-plus playlist-button"></i>
+                                <span>Crea Playlist</span>
+                            </div>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-profile">
+                    <ul class="search-list">
+                        <li>
+                            <div class="nav-button">
+                                <figure class="nav-bar-image"><img src="./img/download.svg" alt=""></figure>
+                                <span>Installa app</span>
+                            </div>
+                        </li>
+                        <li>
+                            <hr>
+                        </li>
+                        <li>
+                            <div class="nav-button">
+                                <figure class="nav-bar-image"><img src="./img/profile.svg" alt=""></figure>
+                                <span>John Doe</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <main class="app_content"></main>
+        </div>
 
         <!-- area toolbar -->
 
-        <div class="app_toolbar">
+        <aside class="app_toolbar">
             <div class="col">
                 <ul class="streaming-album">
                     <li><img class="streaming-album-img" src="./img/sinister.jpeg" alt=""></li>
@@ -58,11 +121,10 @@
                     <li class="timeline-bar volume-bar">
                             <a href="#"class="timeline-process volume"></a>
                         <a href="#" class="scroll-button"><i class="fa-solid fa-circle"></i></a>
-
                     </li>
                 </ul>
             </div>
-        </div>
+        </aside>
     </div>
 </body>
 </html>
