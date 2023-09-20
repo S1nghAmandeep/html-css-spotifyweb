@@ -84,6 +84,18 @@ a {
     padding: 10px;
 }
 
+.select-bar {
+    position: relative;
+}
+
+.green-bar {
+    height: 35px;
+    width: 3px;
+    background-color: var(--green);
+    position: absolute;
+    left: -10px;
+}
+
 .image-logo-big {
     display: none;
 }
@@ -107,14 +119,21 @@ a {
 .card-profile {
     margin-top: auto;
 }
-/* lista musica */
+
+.profile-image {
+    background-color: var(--grey);
+    border-radius: 50%;
+    mask-image: ;
+}
+
+/* inizio lista musica */
 
 .app_content {
     flex-grow: 1;
     background-color: var(--dark-blue);
 }
 
-/* area toolbar */
+/* inizio area toolbar */
 
 .app_toolbar {
     height: auto;
