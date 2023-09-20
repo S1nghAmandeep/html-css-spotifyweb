@@ -45,6 +45,7 @@ a {
     margin-bottom: 15px;
 }
 
+
 /* debug */
 
 
@@ -53,10 +54,10 @@ a {
     padding: 20px;
 } */
 
-main [class^="card"] {
+/* main [class^="card"] {
     border: 1px solid rgb(255, 4, 0);
     padding: 10px;
-}
+} */
 
 .app {
     height: 100vh;
@@ -123,21 +124,23 @@ main [class^="card"] {
 .profile-image {
     background-color: var(--grey);
     border-radius: 50%;
-    mask-image: ;
 }
 
 /* inizio lista musica principale */
 
 .app_content {
     flex-grow: 1;
+    overflow: auto;
     background-color: rgb(76, 97, 99);
 }
+
 
 .card-upgrade {
     display: flex;
     flex-direction: row-reverse;
     background-color: rgba(0, 0, 0, 0.7);
     position: sticky;
+    top: 0;
     padding: 20px 5px 30px;
 }
 
@@ -149,6 +152,10 @@ main [class^="card"] {
     color: var(--light);
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.card-type {
+    padding: 20px 0 40px;
 }
 
 .card-type-list {
@@ -167,6 +174,40 @@ main [class^="card"] {
     margin-left: 34px;
     background-color: var(--green);
 }
+
+.card-music-file {
+    padding: 0 10px;
+}
+
+.title-music-file {
+    font-size: 30px;
+    color: var(--light);
+    margin-bottom: 20px;
+}
+
+.card-recently {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+.card-played > span {
+    color: var(--light-grey);
+    font-size: 12px;
+}
+
+.card-played > h4 {
+    color: var(--light);
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.card-played {
+    text-align: center;
+    width: calc((100% / 2) - 10px) ;
+}
+
 
 /* inizio area toolbar */
 
@@ -291,7 +332,7 @@ main [class^="card"] {
 
 
 /* // Small devices (landscape phones, 552px and up) */
-@media (min-width: 552px) {
+@media (min-width: 553px) {
     
     .album {
         margin-right: 40px;
@@ -377,6 +418,9 @@ main [class^="card"] {
         display: inline;
     }
 
+    /* inizio lista musica principale */
+
+
 }   
 
 /* // Medium devices (tablets, 639px and up) */
@@ -386,17 +430,28 @@ main [class^="card"] {
         margin-right: 40px;
     }
 
-    
+    .card-played {
+        text-align: center;
+        width: calc((100% / 4) - 10px) ;
+    }
+
 }
 
 /* // Large devices (desktops, 878px and up) */
 @media (min-width: 878px) {
 
-    
+    .card-played {
+        text-align: center;
+        width: calc((100% / 6) - 10px) ;
+    }
  }
+
+ /* // XX-Large devices (larger desktops, 1400px and up) */
+ @media (min-width: 1440px) {
+
+ 
+  }
 
 /* // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1440px) { ... } */
