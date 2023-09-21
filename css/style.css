@@ -94,10 +94,18 @@ a {
     position: relative;
 }
 
-.text-search-list:hover  {
-    color: var(--green);
-    /* filter: invert(0); */
+.nav-button:hover .text-search-list{
+    color: var(--light);
+    cursor: pointer;
+    transition: 500ms;
 }
+
+.nav-button:hover .nav-bar-image{
+    filter: invert(0);
+    transition: 500ms;
+    cursor: pointer;
+}
+
 
 .nav-bar-image {
     width: 28px;
@@ -200,6 +208,7 @@ a {
 .card-type-list > li:hover {
     color: var(--light);
     transition: 1s;
+    cursor: pointer;
 }
 
 .underline-text {
@@ -457,6 +466,7 @@ a {
     .add-playlist:hover {
         color: var(--light);
         transition: 500ms;
+        cursor: pointer;
     }
 
     .playlist-button {
@@ -478,6 +488,7 @@ a {
 
     .playlist-menu > li:hover {
         color: var(--light);
+        cursor: pointer;
     }
     
     .divider {
