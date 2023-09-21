@@ -82,11 +82,22 @@ a {
     flex-direction: column;
     flex-shrink: 0;
     background-color: var(--black);
-    padding: 10px;
+    padding: 15px 0;
+    align-items: center;
+}
+
+.card-nav-logo {
+    padding: 0px 10px 0;
 }
 
 .select-bar {
     position: relative;
+}
+
+.nav-bar-image {
+    width: 28px;
+    display: block;
+    filter: invert(0.3);
 }
 
 .green-bar {
@@ -109,6 +120,10 @@ a {
     filter: invert(0.3);
 }
 
+.card-search-list {
+    padding: 0 10px;
+}
+
 .text-search-list {
     display: none;
 }
@@ -119,11 +134,13 @@ a {
 
 .card-profile {
     margin-top: auto;
+    padding: 0 10px;
 }
 
 .profile-image {
     background-color: var(--grey);
     border-radius: 50%;
+    aspect-ratio: 1;
 }
 
 /* inizio lista musica principale */
@@ -131,7 +148,7 @@ a {
 .app_content {
     flex-grow: 1;
     overflow: auto;
-    background-color: rgb(76, 97, 99);
+    background-color: var(--dark-blue);
 }
 
 
@@ -176,19 +193,19 @@ a {
 }
 
 .card-music-file {
-    padding: 0 10px;
+    padding: 20px 10px;
 }
 
 .title-music-file {
-    font-size: 30px;
+    font-size: 26px;
     color: var(--light);
-    margin-bottom: 20px;
 }
 
 .card-recently {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    margin-top: 25px;
 }
 
 
@@ -203,9 +220,19 @@ a {
     margin-top: 10px;
 }
 
+.card-music-file > p {
+    color: var(--light-grey);
+    font-size: 14px;
+    margin-top: 7px;
+}
+
 .card-played {
     text-align: center;
     width: calc((100% / 2) - 10px) ;
+}
+
+.popular-artist-img {
+    border-radius: 50%;
 }
 
 
@@ -340,6 +367,7 @@ a {
 
     .nav-bar {
         width: 250px;
+        align-items: stretch;
     }
 
     .image-logo-big {
@@ -360,12 +388,6 @@ a {
         gap: 15px;
     }
     
-    .nav-bar-image {
-        width: 22px;
-        display: block;
-        filter: invert(0.3);
-    }
-    
     .nav-button {
         display: flex;
         font-size: 20px;
@@ -383,7 +405,13 @@ a {
     
     .card-playlist {
         display: block;
+        padding: 0 10px;
         margin-top: 20px;
+    }
+
+    .add-playlist {
+        color: var(--light-grey);
+        margin-bottom: 15px;
     }
     
     .playlist-button {
