@@ -94,6 +94,11 @@ a {
     position: relative;
 }
 
+.text-search-list:hover  {
+    color: var(--green);
+    /* filter: invert(0); */
+}
+
 .nav-bar-image {
     width: 28px;
     display: block;
@@ -158,6 +163,7 @@ a {
     background-color: rgba(0, 0, 0, 0.7);
     position: sticky;
     top: 0;
+    z-index: 999;
     padding: 20px 5px 30px;
 }
 
@@ -169,6 +175,12 @@ a {
     color: var(--light);
     font-weight: 600;
     text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.upgrade-button:hover {
+    scale: 1.15;
+    transition: 1s;
 }
 
 .card-type {
@@ -183,6 +195,11 @@ a {
     text-transform: uppercase;
     color: var(--light-grey);
     font-weight: 700;
+}
+
+.card-type-list > li:hover {
+    color: var(--light);
+    transition: 1s;
 }
 
 .underline-text {
@@ -229,6 +246,27 @@ a {
 .card-played {
     text-align: center;
     width: calc((100% / 2) - 10px) ;
+    position: relative;
+}
+
+.card-played:hover .play-music-icon {
+    opacity: 1;
+}
+ 
+
+.play-music-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
 .popular-artist-img {
@@ -268,6 +306,7 @@ a {
 
 .click-button:hover {
     color: var(--light);
+    transition: 1s;
 }
 
 .album {
@@ -307,6 +346,7 @@ a {
 
 .play-button:hover {
     transform: scale(1.2);
+    transition: 500ms;
 }
 
 .timeline {
@@ -414,6 +454,11 @@ a {
         margin-bottom: 15px;
     }
     
+    .add-playlist:hover {
+        color: var(--light);
+        transition: 500ms;
+    }
+
     .playlist-button {
         font-size: 32px;
     }
@@ -429,6 +474,10 @@ a {
         flex-direction: column;
         gap: 15px;
         color: var(--light-grey);
+    }
+
+    .playlist-menu > li:hover {
+        color: var(--light);
     }
     
     .divider {
