@@ -46,19 +46,6 @@ a {
 }
 
 
-/* debug */
-
-
-/* .debug [class^="app"] {
-    border: 1px solid rgb(98, 255, 0);
-    padding: 20px;
-} */
-
-/* main [class^="card"] {
-    border: 1px solid rgb(255, 4, 0);
-    padding: 10px;
-} */
-
 .app {
     height: 100vh;
     overflow: hidden;
@@ -72,8 +59,6 @@ a {
     overflow: hidden;
 }
 
-
-
 /* barra di ricerca */
 
 .nav-bar {
@@ -84,6 +69,7 @@ a {
     background-color: var(--black);
     padding: 15px 0;
     align-items: center;
+    z-index: 2;
 }
 
 .card-nav-logo {
@@ -106,7 +92,6 @@ a {
     cursor: pointer;
 }
 
-
 .nav-bar-image {
     width: 28px;
     display: block;
@@ -114,11 +99,11 @@ a {
 }
 
 .green-bar {
-    height: 35px;
+    height: 100%;
     width: 3px;
     background-color: var(--green);
     position: absolute;
-    left: -10px;
+    left: -11px;
 }
 
 .image-logo-big {
@@ -160,18 +145,25 @@ a {
 
 .app_content {
     flex-grow: 1;
-    overflow: auto;
+    overflow: hidden;
     background-color: var(--dark-blue);
 }
 
+.music-file-body {
+    overflow: auto;
+    height: 100%;
+    padding-top: 100px;
+}
 
 .card-upgrade {
     display: flex;
     flex-direction: row-reverse;
     background-color: rgba(0, 0, 0, 0.7);
-    position: sticky;
+    position:fixed;
+    width: 100%;
     top: 0;
-    z-index: 999;
+    left: 0;
+    z-index: 1;
     padding: 20px 5px 30px;
 }
 
@@ -192,7 +184,7 @@ a {
 }
 
 .card-type {
-    padding: 20px 0 40px;
+    padding: 20px 10px 40px;
 }
 
 .card-type-list {
@@ -234,7 +226,6 @@ a {
     margin-top: 25px;
 }
 
-
 .card-played > span {
     color: var(--light-grey);
     font-size: 12px;
@@ -255,13 +246,16 @@ a {
 .card-played {
     text-align: center;
     width: calc((100% / 2) - 10px) ;
+}
+
+.music-cover {
     position: relative;
 }
 
 .card-played:hover .play-music-icon {
     opacity: 1;
+    transition: 800ms;
 }
- 
 
 .play-music-icon {
     display: flex;
@@ -270,7 +264,7 @@ a {
     color: var(--light);
     font-size: 50px;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 70%;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -278,10 +272,13 @@ a {
     opacity: 0;
 }
 
+.cover-round {
+    border-radius: 100%;
+}
+
 .popular-artist-img {
     border-radius: 50%;
 }
-
 
 /* inizio area toolbar */
 
@@ -295,7 +292,6 @@ a {
     background-color: var(--light-black);
     padding: 10px 6px 25px;
 }
-
 
 .streaming-album {
     display: flex;
@@ -442,6 +438,10 @@ a {
         font-size: 20px;
         gap: 10px;
         align-items: center;
+    }
+
+    .green-bar {
+        left: -10px;
     }
     
     .text-search-list {
